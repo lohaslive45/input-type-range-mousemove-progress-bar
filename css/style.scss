@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+//!======背景:大小、顏色======
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #151515;
+}
+div {
+  position: relative;
+}
+//!======數字 % ======
+#rangeValue {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  font-size: 10em;
+  color: #22ff08;
+  font-weight: 800;
+  z-index: 1;
+  &::after {
+    content: "%";
+  }
+}
+//!======進度條======
+.range {
+  position: relative;
+  width: 500px; //!---(設置固定 寬&高 避免隨-數值 %-左右飄移)---
+  height: 30px;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.8);
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #000;
+  box-shadow: 0 0 0 2px #151515, inset 0 0 5px #000;
+  z-index: 1;
+  overflow: hidden;
+  //!======進度條 <點> ======
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #22ff08;
+    cursor: pointer;
+    border: 10px solid #222;
+    border-radius: 50%;
+    box-shadow: -415px 0 0 400px #22ff08; //!---將 <點> 延伸為 <線>，需搭配 .range{ overflow:hidden }使用---
+  }
+}

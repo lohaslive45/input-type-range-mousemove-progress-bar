@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>進度條%</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <div>
+                <!--todo 顯示 數字(百分比 %) -->
+                <h2 id="rangeValue">0</h2>
+                <!--todo 作為js接口，記得設 id=  -->
+                <!--todo 預設進度位置 value="數值" -->
+                <!--todo 產生 進度條(可拖動)。<input type="range"> -->
+                <input type="range" class="range" value="0" min="0" max="100" onmousemove="rangeSlider(this.value)">
+                <!--todo 回傳進度值至js onmousemove="rangeSlider(this.value)" -->
+            </div>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
+</html>
